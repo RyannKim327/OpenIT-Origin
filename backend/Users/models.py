@@ -11,7 +11,6 @@ class User(AbstractUser):
     formatted_location_string = models.TextField(null=True, blank=True)
 
 
-
 class UserPreference(BaseAuthModel):
     class AlertTypes(models.TextChoices):
         MINOR = "minor"                #<3
@@ -32,7 +31,4 @@ class UserPreference(BaseAuthModel):
     magnitude_range = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
-        return f'{self.user.first_name} preference'
-
-
-
+        return f"{self.user.first_name} preference"

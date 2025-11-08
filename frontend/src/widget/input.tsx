@@ -13,12 +13,12 @@ export default function Input(props: InputProps) {
     <div className={`flex flex-col p-2`}>
       <label
         htmlFor={props.key}
-        className={`${isFocus ? "text-red-500" : "text-black"} ml-[15px] text-sm`}
+        className={`${isFocus ? "text-[#727272]"   : "text-[#727272]"} text-sm`}
       >
         {props.label}
       </label>
       <input
-        className={`${isFocus ? "text-red-500 border-red-500" : "text-black"} border border-solid outline-none rounded`}
+        className={`${isFocus ? "text-[#727272] border-black" : "text-[#727272]"} h-9 border border-solid outline-none rounded`}
         id={props.key}
         type={props.type}
         onFocus={() => setFocus(true)}
