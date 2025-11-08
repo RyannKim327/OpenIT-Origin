@@ -1,15 +1,6 @@
-import {
-  CircleMarker,
-  MapContainer,
-  Marker,
-  Popup,
-  TileLayer,
-} from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-
 import { useEffect, useState } from "react";
 import { eq_dry } from "../utils/api";
-import { DivIcon } from "leaflet";
+import { CircleMarker, MapContainer, Popup, TileLayer } from "react-leaflet";
 
 type json = Record<string, any>;
 
@@ -37,51 +28,36 @@ const checker = (date: string) => {
   return c <= 18000000;
 };
 
-export default function MapView() {
+export default function MapComponent() {
+  const [dataset, setDataset] = useState<json[]>([]);
   const info = {
     x: 12.17,
     y: 122.93,
     z: 6,
   };
 
-  const [locator, setLocator] = useState<number[]>([info.x, info.y]);
-  const [dataset, setDataset] = useState<json[]>([]);
-
   useEffect(() => {
     (async () => {
       const response = await eq_dry();
       setDataset(response);
     })();
-
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setLocator([position.coords.latitude, position.coords.longitude]);
-        },
-        () => {
-          // alert("Sorry po");
-        },
-      );
-    }
   }, []);
 
   return (
-    <div className="flex flex-col w-full h-full">
-      <h1>Map</h1>
-      <div className="absolute w-full h-full bg-red-500">
-        <MapContainer
-          className="absolute w-full h-full"
-          center={[info.x, info.y]}
-          zoom={info.z}
-          scrollWheelZoom={true}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
+    <div className="absolute w-full aspect-video">
+      <MapContainer
+        className="absolute w-full h-full"
+        center={[info.x, info.y]}
+        zoom={info.z}
+        scrollWheelZoom={true}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
 
-          {dataset.length > 0
-            ? dataset.map((data) => {
+        {dataset.length > 0
+          ? dataset.map((data) => {
               return data.latitude && data.longitude ? (
                 <CircleMarker
                   // icon={
@@ -110,17 +86,8 @@ export default function MapView() {
                 </CircleMarker>
               ) : null;
             })
-            : null}
-
-          {locator[1] !== info.y ? (
-            <Marker position={locator}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
-            </Marker>
-          ) : null}
-        </MapContainer>
-      </div>
+          : null}
+      </MapContainer>
     </div>
   );
 }

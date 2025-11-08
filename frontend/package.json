@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
     "axios": "^1.13.2",
+    "leaflet": "^1.9.4",
     "chart.js": "^4.5.1",
     "leaflet.heat": "^0.2.0",
     "lucide-react": "^0.553.0",
