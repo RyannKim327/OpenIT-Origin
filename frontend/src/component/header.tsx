@@ -53,6 +53,12 @@ export default function Header() {
           </Link>
           <Link
             className="text-gray-600 hover:text-gray-900 font-semibold"
+            to="/dashboard"
+          >
+            Dashboard
+          </Link>
+          <Link
+            className="text-gray-600 hover:text-gray-900 font-semibold"
             to="/map"
           >
             Map
