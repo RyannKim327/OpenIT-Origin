@@ -49,11 +49,6 @@ export default function MapView() {
   const [dataset, setDataset] = useState<json[]>([]);
 
   useEffect(() => {
-    (async () => {
-      const response = await eq_dry();
-      setDataset(response);
-    })();
-
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -63,6 +58,10 @@ export default function MapView() {
           // alert("Sorry po");
         },
       );
+      (async () => {
+        const response = await eq_dry();
+        setDataset(response);
+      })();
     }
   }, []);
 
@@ -115,9 +114,7 @@ export default function MapView() {
 
           {locator[1] !== info.y ? (
             <Marker position={locator}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
+              <Popup>Your current location is right here.</Popup>
             </Marker>
           ) : null}
         </MapContainer>
