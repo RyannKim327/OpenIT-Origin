@@ -10,15 +10,15 @@ export default function Input(props: InputProps) {
   const [isFocus, setFocus] = useState(false);
 
   return (
-    <div className={`flex flex-col`}>
+    <div className={`flex flex-col p-2`}>
       <label
         htmlFor={props.key}
-        className={`${isFocus ? "text-red-500" : "text-black"} ml-[25px]`}
+        className={`${isFocus ? "text-red-500" : "text-black"} ml-[15px] text-sm`}
       >
         {props.label}
       </label>
       <input
-        className={`${isFocus ? "text-red-500 border-red-500" : "text-black"} border border-solid outline-none rounded m-2`}
+        className={`${isFocus ? "text-red-500 border-red-500" : "text-black"} border border-solid outline-none rounded`}
         id={props.key}
         type={props.type}
         onFocus={() => setFocus(true)}
