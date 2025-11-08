@@ -38,6 +38,15 @@ export default function Report() {
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const payload = {
+      "reporter":"",
+      "photo":imageFile,
+      "description":description,
+      "latitude":"",
+      "longitude":"",
+    }
+
     // console.log("Report submitted!");
     if (activeTab === "photo") {
       setMessage(`Image uploaded successfully ${imageFile?.name}`);
