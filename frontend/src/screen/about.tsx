@@ -3,7 +3,6 @@ import Footer from "../component/footer";
 export default function About() {
   return (
     <div>
-      {/* Section 1: Who We Are */}
       <section className="bg-white text-gray-800 py-16 px-6 md:px-20 mb-10 mt-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-bold mb-6">Who We Are</h2>
@@ -28,7 +27,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section 2: What We Do */}
       <section className="bg-[#f9f9f9] text-gray-800 py-16 px-6 md:px-20">
         <div className="max-w-4xl mx-auto mb-10">
           <h2 className="text-5xl font-bold mb-6 mt-10 text-center">What We Do</h2>
