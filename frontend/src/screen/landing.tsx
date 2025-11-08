@@ -1,7 +1,7 @@
 export default function Landing() {
   return (
     <div className="min-h-screen ">
-      <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 min-h-screen flex items-center justify-start overflow-x-hidden">
+      <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 min-h-screen flex items-center justify-start overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <img
             src="src/assets/map.png"
