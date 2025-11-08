@@ -4,6 +4,7 @@ import Landing from "./landing";
 import Login from "../layout/login";
 import SignUp from "../layout/register";
 import Report from "./report";
+import About from "./about";
 
 export default function Screen() {
   return (
@@ -15,6 +16,7 @@ export default function Screen() {
           <Route element={<Login />} path="/login" />
           <Route element={<SignUp />} path="/signup" />
           <Route element={<Report />} path="/report" />
+          <Route element={<About />} path="/about" />
         </Routes>
       </div>
     </div>
