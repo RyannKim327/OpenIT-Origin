@@ -3,8 +3,8 @@ import Map from "../layout/map";
 
 export default function Landing() {
   return (
-    <div className="h-full overflow-y-scroll snap-y snap-mandatory">
-      <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 min-h-[90vh] flex items-center justify-start overflow-x-hidden snap-start">
+    <div className="h-full w-full overflow-y-scroll">
+      <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 h-full w-full flex items-center justify-start">
         <div className="absolute inset-0 opacity-30">
           <img
             src="src/assets/map.png"
@@ -24,7 +24,7 @@ export default function Landing() {
         <div className="relative z-10 pl-6 lg:pl-20 xl:pl-40">
           <div className="max-w-2xl">
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
-              <span className="text-black">Stay</span> Ahead of the{" "}
+              <span className="text-black">Stay</span> Ahead of the
               <span className="block">
                 <span className="text-black">Shakes</span> with
               </span>
@@ -39,10 +39,16 @@ export default function Landing() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/map" className="bg-white text-gray-800 font-semibold py-4 px-8 rounded-lg hover:bg-[#CE2503] border-white transition-colors duration-200 shadow-lg">
+              <a
+                href="/map"
+                className="bg-white text-gray-800 font-semibold py-4 px-8 rounded-lg hover:bg-[#CE2503] border-white transition-colors duration-200 shadow-lg"
+              >
                 View Map
               </a>
-              <a href="/about" className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-800 transition-colors duration-200">
+              <a
+                href="/about"
+                className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-800 transition-colors duration-200"
+              >
                 Know More
               </a>
             </div>
@@ -56,13 +62,14 @@ export default function Landing() {
 
       <Map />
 
-      <section className="py-16 px-6 lg:px-20 xl:px-40 bg-white snap-start mb-10">
+      <section className="flex flex-col items-center justify-center px-6 lg:px-20 xl:px-40 bg-white w-full py-20 mb-20">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4 mt-10">
             Preparedness & Safety Resources
           </h2>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Access expert guides and tools to prepare for earthquakes and protect your love ones
+            Access expert guides and tools to prepare for earthquakes and
+            protect your love ones
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -74,9 +81,12 @@ export default function Landing() {
                   className="w-8 h-8"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Home Safety</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">
+                Home Safety
+              </h3>
               <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                Get tips to secure your home and create safe zones for earthquake protection.
+                Get tips to secure your home and create safe zones for
+                earthquake protection.
               </p>
               <button className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors">
                 Read more
@@ -91,11 +101,14 @@ export default function Landing() {
                     alt="Community"
                     className="w-8 h-8"
                   />
+                </div>
               </div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Emergency Kits</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">
+                Emergency Kits
+              </h3>
               <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                See how to secure your home and create safe zones for earthquake protection.
+                See how to secure your home and create safe zones for earthquake
+                protection.
               </p>
               <button className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors">
                 Read more
@@ -110,9 +123,12 @@ export default function Landing() {
                   className="w-8 h-8"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Community</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">
+                Community
+              </h3>
               <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                Find how to secure your home and create safe zones for earthquake protection.
+                Find how to secure your home and create safe zones for
+                earthquake protection.
               </p>
               <button className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors">
                 Read more
@@ -121,7 +137,7 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
