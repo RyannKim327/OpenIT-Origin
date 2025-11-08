@@ -4,7 +4,6 @@ import Landing from "./landing";
 import Login from "../layout/login";
 import SignUp from "../layout/register";
 import Map from "../screen/map";
-
 export default function Screen() {
   return (
     <div className="flex flex-col w-dvw h-dvh box-border">
