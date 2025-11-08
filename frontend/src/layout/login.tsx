@@ -10,7 +10,7 @@ export default function Login(){
                 <Input label="PASSWORD" type="password" />
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center -mt-2 gap-2 sm:gap-0">
                     <label className="flex items-center gap-2 text-xs sm:text-sm">
-                        <input type="checkbox" className="rounded" />
+                        <input type="checkbox" className="rounded ml-2" />
                         Remember me?
                     </label>
                     <a href="#" className="text-xs sm:text-sm text-blue-600 hover:text-blue-800">Forgot password?</a>

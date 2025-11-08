@@ -16,19 +16,19 @@ export default function Header(){
                     hover:text-gray-900 
                     transition-colors 
                     font-semibold" 
-                    to="/events">About</Link>
+                    to="/about">About</Link>
 
                     <Link className="text-gray-600 
                     hover:text-gray-900 
                     transition-colors 
                     font-semibold" 
-                    to="/certificates">Report</Link>
+                    to="/report">Report</Link>
 
                     <Link className="text-gray-600
                      hover:text-gray-900 
                      transition-colors 
                      font-semibold" 
-                     to="/certificates">Map</Link>
+                     to="/map">Map</Link>
 
                 </div>
                 <div className="flex flex-row gap-2 items-center">
