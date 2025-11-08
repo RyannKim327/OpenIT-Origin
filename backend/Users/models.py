@@ -11,25 +11,20 @@ class User(AbstractUser):
     formatted_location_string = models.TextField(null=True, blank=True)
 
 
-
 class UserPreference(BaseAuthModel):
     class AlertTypes(models.TextChoices):
-        URGENT = 'urgent'
+        URGENT = "urgent"
         PRIORITY = "priority"
         MILD = "mild"
 
-
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=False)
     alert_types = models.CharField(
-        choices=AlertTypes.choices,
-        default=AlertTypes.PRIORITY,
-        max_length=20
+        choices=AlertTypes.choices, default=AlertTypes.PRIORITY, max_length=20
     )
     location_range = models.IntegerField(null=True, blank=True)
-    minimum_magnitude = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
+    minimum_magnitude = models.DecimalField(
+        max_digits=3, decimal_places=2, null=True, blank=True
+    )
 
     def __str__(self):
-        return f'{self.user.first_name} preference'
-
-
-
+        return f"{self.user.first_name} preference"
