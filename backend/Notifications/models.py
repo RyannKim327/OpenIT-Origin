@@ -12,3 +12,6 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"notified {self.to.first_name}"
+
+    class Meta:
+        ordering = ["-date_notified"]
