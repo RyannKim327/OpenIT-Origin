@@ -3,14 +3,18 @@ import Map from "../layout/map";
 
 export default function Landing() {
   return (
-    <div className="h-full w-full overflow-y-scroll">
+    <div className="h-full w-full">
       <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 h-full w-full flex items-center justify-start">
-        <div className="absolute inset-0 opacity-30">
-          <img
-            src="src/assets/map.png"
-            alt="World Map"
-            className="w-full h-full object-cover"
-          />
+        <div
+          className="absolute inset-0 opacity-30"
+        // style={{
+        //   backgroundImage: "url('src/assets/map.png')",
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "cover",
+        //   backgroundAttachment: "fixed",
+        // }}
+        >
+          <img src="src/assets/map.png" alt="World Map" className="w-full h-full object-cover" />
           {/* <iframe */}
           {/*   src="https://www.google.com/maps/embed/v1/place?q=Ibabang+Iyam&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" */}
           {/*   title="Location" */}
@@ -21,7 +25,7 @@ export default function Landing() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 pl-6 lg:pl-20 xl:pl-40">
+        <div className="relative z-10 pl-6 lg:pl-20 xl:pl-40 ">
           <div className="max-w-2xl">
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
               <span className="text-black">Stay</span> Ahead of the
