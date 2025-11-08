@@ -1,6 +1,8 @@
+import { CircleMarker, MapContainer, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+
 import { useEffect, useState } from "react";
 import { eq_dry } from "../utils/api";
-import { CircleMarker, MapContainer, Popup, TileLayer } from "react-leaflet";
 
 type json = Record<string, any>;
 
@@ -33,7 +35,7 @@ export default function MapComponent() {
   const info = {
     x: 12.17,
     y: 122.93,
-    z: 6,
+    z: 4.5,
   };
 
   useEffect(() => {
@@ -44,12 +46,13 @@ export default function MapComponent() {
   }, []);
 
   return (
-    <div className="absolute w-full aspect-video">
+    <div className="w-full aspect-video bg-red-500">
       <MapContainer
-        className="absolute w-full h-full"
+        className="w-full h-full"
         center={[info.x, info.y]}
         zoom={info.z}
-        scrollWheelZoom={true}
+        scrollWheelZoom={false}
+        zoomControl={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -60,29 +63,22 @@ export default function MapComponent() {
           ? dataset.map((data) => {
               return data.latitude && data.longitude ? (
                 <CircleMarker
-                  // icon={
-                  //   new CircleMarker({
-                  //     // iconSize: 8,
-                  //     iconUrl: "/record.png",
-                  //   })
-                  // }
-                  // draggable={false}
                   radius={5}
                   fillColor={checker(data.date_time) ? "#ff0000" : "#0000ff"}
                   color={checker(data.date_time) ? "#ff0000" : "#0000ff"}
                   center={[data.latitude, data.longitude]}
                 >
-                  <Popup>
-                    <p>
-                      Location: {data.location}
-                      <br />
-                      Magnitude: {data.magnitude}
-                      <br />
-                      KM Dept: {data.depth_km}
-                      <br />
-                      Date Time: {data.date_time}
-                    </p>
-                  </Popup>
+                  {/* <Popup> */}
+                  {/*   <p> */}
+                  {/*     Location: {data.location} */}
+                  {/*     <br /> */}
+                  {/*     Magnitude: {data.magnitude} */}
+                  {/*     <br /> */}
+                  {/*     KM Dept: {data.depth_km} */}
+                  {/*     <br /> */}
+                  {/*     Date Time: {data.date_time} */}
+                  {/*   </p> */}
+                  {/* </Popup> */}
                 </CircleMarker>
               ) : null;
             })
