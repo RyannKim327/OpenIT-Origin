@@ -3,9 +3,9 @@ export default function Landing() {
     <div className="min-h-screen ">
       <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 min-h-screen flex items-center justify-start overflow-x-hidden">
         <div className="absolute inset-0 opacity-30">
-          <img 
-            src="src/assets/map.png" 
-            alt="World Map" 
+          <img
+            src="src/assets/map.png"
+            alt="World Map"
             className="w-full h-full object-cover"
           />
         </div>
@@ -18,7 +18,7 @@ export default function Landing() {
               <span className="block"><span className="text-black">Shakes</span> with</span>
               <span className="block text-white/90"><span className="text-black">Quake</span>Watch</span>
             </h1>
-            
+
             <p className="text-xl text-white/80 mb-8 leading-relaxed">
               Real-time earthquake alerts, live tracking, and safety resources all in one place.
             </p>

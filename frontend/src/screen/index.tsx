@@ -8,7 +8,7 @@ export default function Screen() {
   return (
     <div className="flex flex-col w-dvw h-dvh box-border">
       <Header />
-      <div className="flex flex-col w-full h-full px-2">
+      <div className="flex flex-col w-full h-full">
         <Routes>
           <Route element={<Landing />} path="/" />
           <Route element={<Login />} path="/login" />
