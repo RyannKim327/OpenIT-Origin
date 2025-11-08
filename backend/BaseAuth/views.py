@@ -28,3 +28,15 @@ class BaseAuthModelViewset(ModelViewSet, CustomMixins):
                 else:
                     return self.extract_error_handler(value)
         return str(err)
+
+
+def custom_not_authorized(exc, context):
+    response = exception_handler(exc, context)
+    if isinstance(exc, NotAuthenticated):
+        return Response(
+            {
+                "error": "You are not autorized to gather information here",
+                "code": "Miss na kita baby ko, balik ka na please.",
+            }
+        )
+    return response
