@@ -7,21 +7,8 @@ export default function Landing() {
       <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 h-full w-full flex items-center justify-start">
         <div
           className="absolute inset-0 opacity-30"
-        // style={{
-        //   backgroundImage: "url('src/assets/map.png')",
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundSize: "cover",
-        //   backgroundAttachment: "fixed",
-        // }}
         >
           <img src="src/assets/map.png" alt="World Map" className="w-full h-full object-cover" />
-          {/* <iframe */}
-          {/*   src="https://www.google.com/maps/embed/v1/place?q=Ibabang+Iyam&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" */}
-          {/*   title="Location" */}
-          {/*   loading="lazy" */}
-          {/*   allowFullScreen={false} */}
-          {/*   className="h-full w-full dark:grayscale dark:invert transition ease-in delay-100" */}
-          {/* /> */}
         </div>
 
         <div className="relative z-10 pl-6 lg:pl-20 xl:pl-40 ">
