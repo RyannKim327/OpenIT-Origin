@@ -1,4 +1,5 @@
 from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
 from BaseAuth.views import BaseAuthModelViewset
 from Users.serializers import UserSerializer
 from Users.models import User

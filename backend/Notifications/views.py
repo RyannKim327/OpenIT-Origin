@@ -10,7 +10,8 @@ class NotificationViewsets(ModelViewSet):
 
     def get_queryset(self):
         # check if user is staff, if not then give only notification user restricted data
-        queryset = self.queryset
+        user = self.request.user
+        queryset = self.queryset.filter(to=user)
         user = self.request.user
 
         if user.is_staff:

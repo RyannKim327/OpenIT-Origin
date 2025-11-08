@@ -7,6 +7,12 @@ import MapView from "../screen/map";
 import Report from "./report";
 import About from "./about";
 
+import Index from "./dashboard";
+import Analytics from "./dashboard/analytics";
+import Earthquakes from "./dashboard/earthquakes";
+import Reports from "./report";
+import Notification from "./dashboard/notification";
+
 export default function Screen() {
   return (
     <div className="flex flex-col w-dvw h-dvh overflow-hidden">
@@ -19,6 +25,16 @@ export default function Screen() {
           <Route element={<SignUp />} path="/signup" />
           <Route element={<Report />} path="/report" />
           <Route element={<About />} path="/about" />
+
+
+
+          <Route path="dashboard">
+            <Route index element={<Index/>}/>
+            <Route path="analytics" element={<Analytics/>}/>
+            <Route path="earthquakes" element={<Earthquakes/>}/>
+            <Route path="reports" element={<Reports/>}/>
+            <Route path="notifications" element={<Notification/>}/>
+          </Route>
         </Routes>
       </div>
     </div>
