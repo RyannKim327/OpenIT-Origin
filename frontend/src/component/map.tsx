@@ -30,20 +30,16 @@ const checker = (date: string) => {
   return c <= 18000000;
 };
 
-export default function MapComponent() {
-  const [dataset, setDataset] = useState<json[]>([]);
+interface MapProps {
+  dataset: json[];
+}
+
+export default function MapComponent({ dataset }: MapProps) {
   const info = {
     x: 12.17,
     y: 122.93,
     z: 4.5,
   };
-
-  useEffect(() => {
-    (async () => {
-      const response = await eq_dry();
-      setDataset(response);
-    })();
-  }, []);
 
   return (
     <div className="w-full aspect-video bg-red-500">

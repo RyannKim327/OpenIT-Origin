@@ -19,8 +19,6 @@ class UserPreference(BaseAuthModel):
         MAJOR = "major"                       #6>
 
 
-
-
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=False, related_name="preference")
     alert_types = models.CharField(
         choices=AlertTypes.choices,
