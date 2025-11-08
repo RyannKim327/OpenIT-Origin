@@ -3,7 +3,7 @@ import Header from "../component/header";
 import Landing from "./landing";
 import Login from "../layout/login";
 import SignUp from "../layout/register";
-import Report from "./report";
+import Map from "../screen/map";
 
 export default function Screen() {
   return (
@@ -12,6 +12,7 @@ export default function Screen() {
       <div className="flex flex-col w-full h-full">
         <Routes>
           <Route element={<Landing />} path="/" />
+          <Route element={<Map />} path="/map" />
           <Route element={<Login />} path="/login" />
           <Route element={<SignUp />} path="/signup" />
           <Route element={<Report />} path="/report" />
