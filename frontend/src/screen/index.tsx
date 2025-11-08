@@ -6,7 +6,7 @@ import SignUp from "../layout/register";
 import Map from "../screen/map";
 export default function Screen() {
   return (
-    <div className="flex flex-col w-dvw h-dvh box-border">
+    <div className="flex flex-col w-full h-dvh box-border">
       <Header />
       <div className="flex flex-col w-full h-full">
         <Routes>
