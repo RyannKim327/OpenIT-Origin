@@ -22,8 +22,10 @@ from backend.views import fallback
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/", include("Disasters.urls")),
+    path("api/", include("Notifications.urls"))
 ]
 
-urlpatterns += [path("files", include())]
+# urlpatterns += [path("files", include())]
 
 urlpatterns += [re_path("^.*$", fallback.as_view())]
