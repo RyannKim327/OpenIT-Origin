@@ -11,7 +11,7 @@ export default function Screen() {
   return (
     <div className="flex flex-col w-dvw h-dvh overflow-hidden">
       <Header />
-      <div className="flex flex-col w-full overflow-y-scroll">
+      <div className="flex flex-col w-full overflow-y-scroll overflow-x-hidden">
         <Routes>
           <Route element={<Landing />} path="/" />
           {/* <Route element={<MapView />} path="/map" /> */}
