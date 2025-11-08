@@ -14,16 +14,18 @@ class User(AbstractUser):
 
 class UserPreference(BaseAuthModel):
     class AlertTypes(models.TextChoices):
-        URGENT = 'urgent'
-        PRIORITY = "priority"
-        MILD = "mild"
+        MINOR = "minor"                #<3
+        MODERATE = "moderate"               #3-4.5
+        STRONG = "strong"                      #4.5 - 6
+        MAJOR = "major"                       #6>
+
 
 
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=False, related_name="preference")
     alert_types = models.CharField(
         choices=AlertTypes.choices,
-        default=AlertTypes.PRIORITY,
+        default=AlertTypes.MINOR,
         max_length=20
     )
     location_range = models.IntegerField(null=True, blank=True)
