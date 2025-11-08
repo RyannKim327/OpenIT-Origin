@@ -36,24 +36,25 @@ export default function Map() {
         </h2>
 
         <div className="space-y-3 mb-6 w-full">
-          {dataset.slice(0, 5).map((item) => (
-            <div
-              key={item.location}
-              className="flex flex-row bg-gray-100 rounded-lg p-4 justify-between gap-4 w-full items-center"
-            >
-              <div className="flex flex-col items-center justify-center rounded-full text-lg w-[85px] h-[70px] bg-red-200 border border-red-500 border-solid animate-pulse">
-                {item.magnitude}
-              </div>
-              <div className="flex flex-col w-full">
-                <div className="rounded w-3/4 font-semibold">
-                  {item.location}
+          {dataset &&
+            dataset.slice(0, 5).map((item) => (
+              <div
+                key={item.location}
+                className="flex flex-row bg-gray-100 rounded-lg p-4 justify-between gap-4 w-full items-center"
+              >
+                <div className="flex flex-col items-center justify-center rounded-full text-lg w-[85px] h-[70px] bg-red-200 border border-red-500 border-solid animate-pulse">
+                  {item.magnitude}
                 </div>
-                <div className="rounded w-1/2 text-sm text-gray-500">
-                  {item.date_time}
+                <div className="flex flex-col w-full">
+                  <div className="rounded w-3/4 font-semibold">
+                    {item.location}
+                  </div>
+                  <div className="rounded w-1/2 text-sm text-gray-500">
+                    {item.date_time}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
 
         <button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
