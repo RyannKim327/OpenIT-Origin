@@ -88,14 +88,14 @@ export default function Report() {
 
   return (
     <div className="flex flex-col h-full w-full bg-gray-50">
-      <div className="flex flex-col w-full h-full items-center justify-center py-50">
+      <div className="flex flex-col w-full h-full items-center justify-center px-4 py-50">
         <h1 className="text-5xl font-bold text-gray-900 pb-10">
           Submit Your Report Here
         </h1>
 
         <form
           onSubmit={handleSubmit}
-          className="w-1/3 bg-white p-6 rounded-xl shadow-2xl"
+          className="w-ful lg:w-1/3 bg-white p-6 rounded-xl shadow-2xl"
         >
           <div className="p-1 rounded-md bg-white flex space-x-1 border border-gray-200">
             <button

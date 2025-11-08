@@ -5,14 +5,15 @@ export default function Landing() {
   return (
     <div className="h-full w-full">
       <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 h-full w-full flex items-center justify-start">
-        <div
-          className="absolute inset-0 opacity-30"
-        >
-          <img src="src/assets/map.png" alt="World Map" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 opacity-30">
+          <img
+            src="src/assets/map.png"
+            alt="World Map"
+            className="w-full h-full object-cover"
+          />
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 pl-6 lg:pl-20 xl:pl-40 ">
+        <div className="relative z-10 px-6 text-center lg:text-start lg:pl-20 xl:pl-40 ">
           <div className="max-w-2xl">
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
               <span className="text-black">Stay</span> Ahead of the
@@ -79,9 +80,12 @@ export default function Landing() {
                 Get tips to secure your home and create safe zones for
                 earthquake protection.
               </p>
-              <button className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors">
+              <a
+                href="https://www.mtu.edu/geo/community/seismology/learn/earthquake-take-action/"
+                className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors"
+              >
                 Read more
-              </button>
+              </a>
             </div>
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -101,9 +105,12 @@ export default function Landing() {
                 See how to secure your home and create safe zones for earthquake
                 protection.
               </p>
-              <button className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors">
+              <a
+                href="https://pmgt.org.nz/emergency-prep/?utm_term=earthquake%20safety%20information&utm_campaign=Crime+Prevention+Topics&utm_source=adwords&utm_medium=ppc&hsa_acc=3901438876&hsa_cam=7792641513&hsa_grp=89966329428&hsa_ad=397089003029&hsa_src=g&hsa_tgt=kwd-313920551651&hsa_kw=earthquake%20safety%20information&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=7792641513&gbraid=0AAAAADOv-oiBtDFWyXieqTf9E7CY2dXC7&gclid=CjwKCAiA8bvIBhBJEiwAu5ayrIR-qZzCRhhv_wdU4-QA3WQbiNMjyEPTj84qXe2_NtyQXo5lkfomiRoCOjkQAvD_BwE"
+                className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors"
+              >
                 Read more
-              </button>
+              </a>
             </div>
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -121,9 +128,12 @@ export default function Landing() {
                 Find how to secure your home and create safe zones for
                 earthquake protection.
               </p>
-              <button className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors">
+              <a
+                href="https://www.bria.com.ph/articles/top-10-safest-cities-to-live-in-the-philippines/"
+                className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors"
+              >
                 Read more
-              </button>
+              </a>
             </div>
           </div>
         </div>

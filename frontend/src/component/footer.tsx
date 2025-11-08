@@ -2,14 +2,15 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12 w-full ">
       <div className="w-full px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 ml-15">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 lg:ml-15">
           <div className="md:col-span-2">
             <h2 className="text-3xl font-bold mb-4">
               Quake<span className="text-[#CE2503]">Watch</span>
             </h2>
             <p className="text-gray-300 max-w-md">
-              Streamline your event management with powerful attendance tracking
-              and certification tools. Make every event count with QuakeWatch.
+              World where every individual, family, and community is equipped
+              with the tools and knowledge to respond to seismic events swiftly
+              and effectively.
             </p>
           </div>
           <div>
