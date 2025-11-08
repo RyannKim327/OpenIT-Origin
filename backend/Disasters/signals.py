@@ -5,6 +5,7 @@ from Users.models import User
 from Notifications.models import Notification
 from utils.CalculateDistance import haversine
 
+
 @receiver(post_save, sender=Disaster)
 def new_disaster(sender, instance, created, **kwargs):
     if not created:
@@ -74,9 +75,13 @@ def new_report(sender, instance, created, **kwargs):
         for admin in admins:
             notif = Notification.objects.create(
                 to=admin,
-                content=f'{instance.reporter.first_name} reported {instance.description}'
+                content=f'{instance.reporter.first_name} reported {instance.description}',
+                type=Notification.NotificationType.REPORT
             )
             print(f'Notified Staff {admin.first_name} for the report')
+
+
+
 
 
 @receiver(post_save, sender=Report)
@@ -96,7 +101,8 @@ def report_verified(sender, instance, created, **kwargs):
     # maybe handle saving to disaster the after very8ing
     notif = Notification.objects.create(
         to=instance.reporter,
-        content=f'Your report #{instance.id} - {instance.description} has been verified'
+        content=f'Your report #{instance.id} - {instance.description} has been verified',
+        type=Notification.NotificationType.REPORT
     )
     print(f'Sent notification to report {instance.report.first_name}')
 
