@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class BaseAuthModel:
+class BaseAuthModel(models.Model):
     order = "id"
 
     class Meta:
@@ -20,4 +20,4 @@ class BaseAuthModel:
             cls.Meta = Meta
 
         if not hasattr(cls.Meta, "ordering"):
-            cls.Meta.ordering = f"{cls.order}"
+            cls.Meta.ordering = (f"{cls.order}",)
