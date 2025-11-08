@@ -13,7 +13,7 @@ class Disaster(BaseAuthModel):
     longitude = models.CharField(max_length=80, null=False)
     formatted_location_string = models.TextField(null=True, blank=True)
     magnitude = models.DecimalField(max_digits=3, decimal_places=2, null=False)
-    date_recorded = models.DateField(default=timezone.now)
+    date_recorded = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f'{self.formatted_location_string}: {self.magnitude}' if self.formatted_location_string else f'lat: {self.latitude} - lng: {self.longitude} : M{self.magnitude}'
