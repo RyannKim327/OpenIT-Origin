@@ -19,12 +19,20 @@ class Disaster(BaseAuthModel):
         return f'{self.formatted_location_string}: {self.magnitude}' if self.formatted_location_string else f'lat: {self.latitude} - lng: {self.longitude} : M{self.magnitude}'
     
 class Report(BaseAuthModel):
+    class ReportStatus(models.TextChoices):
+        PENDING = 'pending'
+        VERIFIED = "verified"
+
+
     order = "date_reported"
-
-
     reporter = models.ForeignKey(User, on_delete=models.CASCADE, null=False, related_name='reports')
     photo = models.ImageField(upload_to='', null=True, blank=True)
     description = models.TextField()
+    status = models.CharField(
+        choices=ReportStatus.choices,
+        default=ReportStatus.PENDING,
+        max_length=50
+    )
     latitude = models.CharField(max_length=80, null=False)
     longitude = models.CharField(max_length=80, null=False)
     formatted_location_string = models.TextField(null=True, blank=True)
