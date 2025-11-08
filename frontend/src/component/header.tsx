@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export default function Header() {
   return (
-    <div className="flex flex-row px-8 py-6 justify-between w-full items-center shadow-md">
+    <div className="flex flex-row px-8 py-6 justify-between w-full items-center border-b-solid border-b-neutral-200 border-b">
       <h1 className="text-3xl font-bold text-gray-800">
         Quake<span className="font-semibold text-[#CE2503]">Watch</span>
       </h1>
