@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MapComponent from "../component/map";
 import { eq_dry } from "../utils/api";
 import { getData, setData } from "../utils/data";
+import { Link } from "react-router";
 
 type json = Record<string, any>;
 
@@ -57,9 +58,9 @@ export default function Map() {
             ))}
         </div>
 
-        <button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+        <Link to="/map" className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
           Open Live Tracker
-        </button>
+        </Link>
       </div>
     </div>
   );
