@@ -45,15 +45,15 @@ export default function About() {
             information available.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-40">
+          <div className="flex flex-col items-center lg:grid lg:grid-cols-3 gap-40">
             <div className="text-center bg-white rounded-lg p-7 w-80 shadow-md mt-8 hover:scale-110 group-hover:rotate-6 duration-300">
               <div className="bg-blue-200 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 animate-pulse">
                 <span className="text-2xl font-bold"></span>
-                  <img
-                    src="src/assets/time.png"
-                    alt="Community"
-                    className="w-8 h-8"
-                  />
+                <img
+                  src="src/assets/time.png"
+                  alt="Community"
+                  className="w-8 h-8"
+                />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Real-time Monitoring
@@ -66,11 +66,11 @@ export default function About() {
             <div className="text-center bg-white rounded-lg p-7 w-80 shadow-md mt-8 hover:scale-110 group-hover:rotate-6 duration-300">
               <div className="bg-green-200 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 animate-pulse">
                 <span className="text-2xl font-bold"></span>
-                  <img
-                    src="src/assets/analytics.png"
-                    alt="Community"
-                    className="w-8 h-8"
-                  />
+                <img
+                  src="src/assets/analytics.png"
+                  alt="Community"
+                  className="w-8 h-8"
+                />
               </div>
               <h3 className="text-xl font-semibold mb-2">Data Analysis</h3>
               <p className="text-base">
@@ -81,11 +81,11 @@ export default function About() {
             <div className="text-center bg-white rounded-lg p-7 w-80 shadow-md mt-8  hover:scale-110 group-hover:rotate-6 duration-300">
               <div className="bg-red-200 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 animate-pulse">
                 <span className="text-2xl font-bold"></span>
-                  <img
-                    src="src/assets/alert.png"
-                    alt="Community"
-                    className="w-8 h-8"
-                  />
+                <img
+                  src="src/assets/alert.png"
+                  alt="Community"
+                  className="w-8 h-8"
+                />
               </div>
               <h3 className="text-xl font-semibold mb-2">Alert System</h3>
               <p className="text-base">
