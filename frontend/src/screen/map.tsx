@@ -11,6 +11,7 @@ import "leaflet/dist/leaflet.css";
 import { useEffect, useState } from "react";
 import { eq_dry } from "../utils/api";
 import { DivIcon, polygon } from "leaflet";
+import { getData, setData } from "../utils/data";
 
 type json = Record<string, any>;
 
@@ -46,7 +47,7 @@ export default function MapView() {
   };
 
   const [locator, setLocator] = useState<number[]>([info.x, info.y]);
-  const [dataset, setDataset] = useState<json[]>([]);
+  const [dataset, setDataset] = useState<json[]>(getData("mapdata") ?? []);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -60,6 +61,7 @@ export default function MapView() {
       );
       (async () => {
         const response = await eq_dry();
+        setData("mapdata", response)
         setDataset(response);
       })();
     }
@@ -82,34 +84,34 @@ export default function MapView() {
 
           {dataset.length > 0
             ? dataset.map((data) => {
-                return data.latitude && data.longitude ? (
-                  <CircleMarker
-                    // icon={
-                    //   new CircleMarker({
-                    //     // iconSize: 8,
-                    //     iconUrl: "/record.png",
-                    //   })
-                    // }
-                    // draggable={false}
-                    radius={5}
-                    fillColor={checker(data.date_time) ? "#ff0000" : "#0000ff"}
-                    color={checker(data.date_time) ? "#ff0000" : "#0000ff"}
-                    center={[data.latitude, data.longitude]}
-                  >
-                    <Popup>
-                      <p>
-                        Location: {data.location}
-                        <br />
-                        Magnitude: {data.magnitude}
-                        <br />
-                        KM Dept: {data.depth_km}
-                        <br />
-                        Date Time: {data.date_time}
-                      </p>
-                    </Popup>
-                  </CircleMarker>
-                ) : null;
-              })
+              return data.latitude && data.longitude ? (
+                <CircleMarker
+                  // icon={
+                  //   new CircleMarker({
+                  //     // iconSize: 8,
+                  //     iconUrl: "/record.png",
+                  //   })
+                  // }
+                  // draggable={false}
+                  radius={5}
+                  fillColor={checker(data.date_time) ? "#ff0000" : "#0000ff"}
+                  color={checker(data.date_time) ? "#ff0000" : "#0000ff"}
+                  center={[data.latitude, data.longitude]}
+                >
+                  <Popup>
+                    <p>
+                      Location: {data.location}
+                      <br />
+                      Magnitude: {data.magnitude}
+                      <br />
+                      KM Dept: {data.depth_km}
+                      <br />
+                      Date Time: {data.date_time}
+                    </p>
+                  </Popup>
+                </CircleMarker>
+              ) : null;
+            })
             : null}
 
           {locator[1] !== info.y ? (

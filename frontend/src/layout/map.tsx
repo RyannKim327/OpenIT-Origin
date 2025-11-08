@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import MapComponent from "../component/map";
 import { eq_dry } from "../utils/api";
+import { getData, setData } from "../utils/data";
 
 type json = Record<string, any>;
 
 export default function Map() {
-  const [dataset, setDataset] = useState<json[]>([]);
+  const [dataset, setDataset] = useState<json[]>(getData("mapdata") ?? []);
 
   useEffect(() => {
     (async () => {
       const response = await eq_dry();
+      setData("mapdata", response);
       setDataset(response);
     })();
   }, []);
