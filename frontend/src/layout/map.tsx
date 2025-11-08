@@ -28,7 +28,7 @@ export default function Map() {
         </p>
       </div>
 
-      <div className="w-1/3 bg-white rounded-lg shadow-lg p-6 mb-6">
+      <div className="flex flex-col w-full lg:w-1/3 bg-white rounded-lg shadow-lg p-6 mb-6">
         {/* <div className="rounded-lg overflow-hidden shadow-lg w-full h-full"> */}
         <MapComponent dataset={dataset} />
         {/* </div> */}
@@ -58,7 +58,10 @@ export default function Map() {
             ))}
         </div>
 
-        <Link to="/map" className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+        <Link
+          to="/map"
+          className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-center"
+        >
           Open Live Tracker
         </Link>
       </div>

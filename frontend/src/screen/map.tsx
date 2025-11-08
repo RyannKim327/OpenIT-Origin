@@ -61,7 +61,7 @@ export default function MapView() {
       );
       (async () => {
         const response = await eq_dry();
-        setData("mapdata", response)
+        setData("mapdata", response);
         setDataset(response);
       })();
     }
@@ -69,7 +69,6 @@ export default function MapView() {
 
   return (
     <div className="flex flex-col w-full h-full">
-      <h1>Map</h1>
       <div className="w-full h-full">
         <MapContainer
           className="absolute w-full h-full"
@@ -84,34 +83,34 @@ export default function MapView() {
 
           {dataset.length > 0
             ? dataset.map((data) => {
-              return data.latitude && data.longitude ? (
-                <CircleMarker
-                  // icon={
-                  //   new CircleMarker({
-                  //     // iconSize: 8,
-                  //     iconUrl: "/record.png",
-                  //   })
-                  // }
-                  // draggable={false}
-                  radius={5}
-                  fillColor={checker(data.date_time) ? "#ff0000" : "#0000ff"}
-                  color={checker(data.date_time) ? "#ff0000" : "#0000ff"}
-                  center={[data.latitude, data.longitude]}
-                >
-                  <Popup>
-                    <p>
-                      Location: {data.location}
-                      <br />
-                      Magnitude: {data.magnitude}
-                      <br />
-                      KM Dept: {data.depth_km}
-                      <br />
-                      Date Time: {data.date_time}
-                    </p>
-                  </Popup>
-                </CircleMarker>
-              ) : null;
-            })
+                return data.latitude && data.longitude ? (
+                  <CircleMarker
+                    // icon={
+                    //   new CircleMarker({
+                    //     // iconSize: 8,
+                    //     iconUrl: "/record.png",
+                    //   })
+                    // }
+                    // draggable={false}
+                    radius={5}
+                    fillColor={checker(data.date_time) ? "#ff0000" : "#0000ff"}
+                    color={checker(data.date_time) ? "#ff0000" : "#0000ff"}
+                    center={[data.latitude, data.longitude]}
+                  >
+                    <Popup>
+                      <p>
+                        Location: {data.location}
+                        <br />
+                        Magnitude: {data.magnitude}
+                        <br />
+                        KM Dept: {data.depth_km}
+                        <br />
+                        Date Time: {data.date_time}
+                      </p>
+                    </Popup>
+                  </CircleMarker>
+                ) : null;
+              })
             : null}
 
           {locator[1] !== info.y ? (
