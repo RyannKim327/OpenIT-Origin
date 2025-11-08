@@ -8,8 +8,7 @@ export default function Footer() {
               Quake<span className="text-[#CE2503]">Watch</span>
             </h2>
             <p className="text-gray-300 max-w-md">
-              Streamline your event management with powerful attendance tracking
-              and certification tools. Make every event count with QuakeWatch.
+              World where every individual, family, and community is equipped with the tools and knowledge to respond to seismic events swiftly and effectively.
             </p>
           </div>
           <div>
