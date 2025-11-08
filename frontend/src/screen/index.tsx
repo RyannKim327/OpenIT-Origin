@@ -4,10 +4,11 @@ import Landing from "./landing";
 import Login from "../layout/login";
 import SignUp from "../layout/register";
 import Map from "../screen/map";
+import Report from "./report";
 
 export default function Screen() {
   return (
-    <div className="flex flex-col w-dvw h-dvh">
+    <div className="flex flex-col w-dvw h-dvh overflow-hidden">
       <Header />
       <div className="flex flex-col w-full h-full">
         <Routes>
