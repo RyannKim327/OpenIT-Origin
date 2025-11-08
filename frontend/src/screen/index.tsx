@@ -9,9 +9,9 @@ import About from "./about";
 
 export default function Screen() {
   return (
-    <div className="flex flex-col w-dvw h-dvh overflow-hidden">
+    <div className="flex flex-col w-dvw min-h-dvh">
       <Header />
-      <div className="flex flex-col w-full h-full">
+      <div className="flex flex-col w-full flex-1">
         <Routes>
           <Route element={<Landing />} path="/" />
           <Route element={<Map />} path="/map" />
