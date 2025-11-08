@@ -13,8 +13,8 @@ export default function About() {
             the impact of natural disasters.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-10 text-left">
-            <div className="bg-white shadow-sm rounded-lg p-7">
+          <div className="grid md:grid-cols-2 gap-10 text-left ">
+            <div className="bg-white shadow-sm rounded-lg p-7 hover:scale-110 group-hover:rotate-6 duration-300 ">
               <h3 className="text-2xl font-bold mb-2">Our Mission</h3>
               <p className="text-base">
                 To deliver fast, reliable, and accessible earthquake monitoring
@@ -22,7 +22,7 @@ export default function About() {
                 safe when seconds matter most.
               </p>
             </div>
-            <div className="bg-white shadow-sm rounded-lg p-7">
+            <div className="bg-white shadow-sm rounded-lg p-7 hover:scale-110 group-hover:rotate-6 duration-300 ">
               <h3 className="text-2xl font-bold mb-2">Our Vision</h3>
               <p className="text-base">
                 A world where every individual, family, and community is

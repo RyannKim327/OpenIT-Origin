@@ -5,7 +5,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="px-6 py-4 shadow-md w-full">
+        <header className="px-7 py-6 shadow-md w-full">
             <div className="flex justify-between items-center">
                 <h1 className="text-3xl font-bold text-gray-800">
                     Quake<span className="font-semibold text-[#CE2503]">Watch</span>
