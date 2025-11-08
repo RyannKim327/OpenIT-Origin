@@ -17,13 +17,18 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path, re_path
+from rest_framework_simplejwt.views import TokenRefreshView, TokenVerifyView
 
 from backend.views import fallback
 
+API = "api/"
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", include("Disasters.urls")),
-    path("api/", include("Notifications.urls"))
+    path(API, include("Disasters.urls")),
+    path(API, include("Notifications.urls")),
+    path(f"{API}auth/verify/", TokenVerifyView.as_view()),
+    path(f"{API}auth/refresh/", TokenRefreshView.as_view()),
 ]
 
 # urlpatterns += [path("files", include())]
