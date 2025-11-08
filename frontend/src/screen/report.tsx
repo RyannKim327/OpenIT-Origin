@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../component/footer';
 
+// Report Components
 export default function Report() {
   const [activeTab, setActiveTab] = useState<'photo' | 'text'>('photo');
   const [description, setDescription] = useState<string>('');
@@ -13,11 +15,13 @@ export default function Report() {
     };
   }, [preview]);
 
+  // Handle photo upload
   const handleUploadPhoto = () => {
     const input = document.getElementById('photo-input') as HTMLInputElement;
     input?.click();
   };
 
+  // Handle file selection
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] ?? null;
     setImageFile(file);
@@ -30,6 +34,7 @@ export default function Report() {
     }
   };
 
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Report submitted!');
@@ -37,6 +42,7 @@ export default function Report() {
     setDescription('');
   };
 
+  // Get tab classes based on active state
   const getTabClasses = (tabName: 'photo' | 'text') => {
     const baseClasses = "flex-1 py-2 text-sm font-medium transition-colors duration-150 rounded-md";
     if (activeTab === tabName) {
@@ -139,7 +145,7 @@ export default function Report() {
           </>
         )}
       </form>
-
+    <Footer />
     </div>
   );
 }
