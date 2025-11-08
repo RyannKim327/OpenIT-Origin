@@ -46,9 +46,14 @@ export default function About() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-40">
-            <div className="text-center bg-white rounded-lg p-7 w-80 shadow-md mt-8">
-              <div className="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-white rounded-lg p-7 w-80 shadow-md mt-8 hover:scale-110 group-hover:rotate-6 duration-300">
+              <div className="bg-blue-200 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 animate-pulse">
                 <span className="text-2xl font-bold"></span>
+                  <img
+                    src="src/assets/time.png"
+                    alt="Community"
+                    className="w-8 h-8"
+                  />
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Real-time Monitoring
@@ -58,9 +63,14 @@ export default function About() {
                 seismic networks worldwide.
               </p>
             </div>
-            <div className="text-center bg-white rounded-lg p-7 w-80 shadow-md mt-8">
-              <div className="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-white rounded-lg p-7 w-80 shadow-md mt-8 hover:scale-110 group-hover:rotate-6 duration-300">
+              <div className="bg-green-200 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 animate-pulse">
                 <span className="text-2xl font-bold"></span>
+                  <img
+                    src="src/assets/analytics.png"
+                    alt="Community"
+                    className="w-8 h-8"
+                  />
               </div>
               <h3 className="text-xl font-semibold mb-2">Data Analysis</h3>
               <p className="text-base">
@@ -68,9 +78,14 @@ export default function About() {
                 magnitude and location information.
               </p>
             </div>
-            <div className="text-center bg-white rounded-lg p-7 w-80 shadow-md mt-8">
-              <div className="bg-red-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-white rounded-lg p-7 w-80 shadow-md mt-8  hover:scale-110 group-hover:rotate-6 duration-300">
+              <div className="bg-red-200 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 animate-pulse">
                 <span className="text-2xl font-bold"></span>
+                  <img
+                    src="src/assets/alert.png"
+                    alt="Community"
+                    className="w-8 h-8"
+                  />
               </div>
               <h3 className="text-xl font-semibold mb-2">Alert System</h3>
               <p className="text-base">
@@ -82,15 +97,13 @@ export default function About() {
         </div>
       </section>
 
-
-
       <section className="bg-white text-gray-900 py-16 px-6 md:px-20">
         <div className="max-w-3xl mx-auto mb-10 mt-10">
           <h2 className="text-5xl font-bold mb-8 text-center">
             Emergency Contacts
           </h2>
           <ul className="space-y-8">
-            <li className="border-l-4 border-red-500 pl-4 bg-white shadow-lg rounded-lg p-5">
+            <li className="border-l-4 border-red-500 pl-4 bg-white shadow-lg rounded-lg p-5 hover:scale-110 transition duration-300">
               <h3 className="text-xl font-semibold">
                 National Disaster Risk Reduction & Management Council (NDRRMC)
               </h3>
@@ -101,7 +114,7 @@ export default function About() {
                 Emergency Number: <span className="font-medium">911</span>
               </p>
             </li>
-            <li className="border-l-4 border-yellow-500 pl-4 bg-white shadow-lg rounded-lg p-5">
+            <li className="border-l-4 border-yellow-500 pl-4 bg-white shadow-lg rounded-lg p-5 hover:scale-110 transition duration-300">
               <h3 className="text-xl font-semibold">
                 Philippine Institute of Volcanology and Seismology (PHIVOLCS)
               </h3>
@@ -109,13 +122,13 @@ export default function About() {
                 Hotline: <span className="font-medium">+63-2-8426-1468</span>
               </p>
             </li>
-            <li className="border-l-4 border-orange-500 pl-4 bg-white shadow-lg rounded-lg p-5">
+            <li className="border-l-4 border-orange-500 pl-4 bg-white shadow-lg rounded-lg p-5 hover:scale-110 transition duration-300">
               <h3 className="text-xl font-semibold">Local Fire & Rescue</h3>
               <p>
                 Emergency Number: <span className="font-medium">911</span>
               </p>
             </li>
-            <li className="border-l-4 border-red-600 pl-4 bg-white shadow-lg rounded-lg p-5">
+            <li className="border-l-4 border-red-600 pl-4 bg-white shadow-lg rounded-lg p-5 hover:scale-110 transition duration-300">
               <h3 className="text-xl font-semibold">
                 Red Cross Emergency Hotline
               </h3>
