@@ -71,7 +71,7 @@ export async function get(endpoint: string, params?: PARAMS) {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/json",
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     params,
   });
@@ -91,7 +91,7 @@ export async function post(endpoint: string, params: PARAMS) {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/json",
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
   });
   return response(data, status);
@@ -110,9 +110,16 @@ export async function update(endpoint: string, params: PARAMS) {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/json",
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
   });
 
+  return response(data, status);
+}
+
+export async function eq_dry() {
+  const { data, status } = await axios.get(
+    "https://earthquakeapi.forestparty223.workers.dev/api/earthquakes",
+  );
   return response(data, status);
 }
