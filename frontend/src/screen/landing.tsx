@@ -11,7 +11,6 @@ export default function Landing() {
           <img src="src/assets/map.png" alt="World Map" className="w-full h-full object-cover" />
         </div>
 
-        {/* Content */}
         <div className="relative z-10 pl-6 lg:pl-20 xl:pl-40 ">
           <div className="max-w-2xl">
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">

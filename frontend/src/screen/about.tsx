@@ -82,6 +82,8 @@ export default function About() {
         </div>
       </section>
 
+
+
       <section className="bg-white text-gray-900 py-16 px-6 md:px-20">
         <div className="max-w-3xl mx-auto mb-10 mt-10">
           <h2 className="text-5xl font-bold mb-8 text-center">
