@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../component/footer";
+import { useAuth } from "../context/AuthContext";
+import { post } from "../utils/api";
+import { getData } from "../utils/data";
 
 // Report Components
 export default function Report() {
@@ -10,6 +13,8 @@ export default function Report() {
   const [isPhotoUploaded, setIsPhotoUploaded] = useState<boolean>(false);
   const [message, setMessage] = useState("");
 
+  const user = getData("user")
+  console.log(user)
   useEffect(() => {
     return () => {
       if (preview) URL.revokeObjectURL(preview);
@@ -36,15 +41,27 @@ export default function Report() {
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!user){
+      alert('You havent logged in yet')
+      return;}
+
 
     const payload = {
-      "reporter":"",
+      "reporter":user.username,
       "photo":imageFile,
       "description":description,
-      "latitude":"",
-      "longitude":"",
+      "latitude":"2.0",
+      "longitude":"2.0",
+    }
+
+    const response = await post(`/api/reports`,{
+      payload
+    })
+
+    if (response.data){
+      alert('Reported')
     }
 
     // console.log("Report submitted!");

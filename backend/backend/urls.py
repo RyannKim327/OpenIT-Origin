@@ -29,7 +29,7 @@ urlpatterns = [
     path(API, include("Notifications.urls")),
     path(f"{API}auth/verify/", TokenVerifyView.as_view()),
     path(f"{API}auth/refresh/", TokenRefreshView.as_view()),
-    path(f"{API}auth/", include("Users.urls"))
+    path(f"{API}", include("Users.urls"))
 ]
 
 # urlpatterns += [path("files", include())]
