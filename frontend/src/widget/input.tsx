@@ -4,6 +4,7 @@ interface InputProps {
   label: string;
   type: string;
   key: string;
+  onChange: (e)=>void
 }
 
 export default function Input(props: InputProps) {
@@ -18,6 +19,8 @@ export default function Input(props: InputProps) {
         {props.label}
       </label>
       <input
+        required
+        onChange={props.onChange}
         className={`${isFocus ? "text-[#727272] border-black" : "text-[#727272]"} h-9 border border-solid outline-none rounded`}
         id={props.key}
         type={props.type}
