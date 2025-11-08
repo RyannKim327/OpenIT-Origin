@@ -3,8 +3,8 @@ import Map from "../layout/map";
 
 export default function Landing() {
   return (
-    <div className="h-full overflow-y-scroll snap-y snap-mandatory">
-      <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 min-h-[90vh] flex items-center justify-start overflow-x-hidden snap-start">
+    <div className="h-full overflow-y-scroll">
+      <section className="relative bg-gradient-to-br from-red-400 via-[#CE2503] to-orange-100 min-h-[90vh] flex items-center justify-start overflow-x-hidden">
         <div className="absolute inset-0 opacity-30">
           <img
             src="src/assets/map.png"
